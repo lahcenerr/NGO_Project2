@@ -11,22 +11,24 @@ class User(models.Model):
     def __str__(self):
         return self.Firstname
 
-class Donation(models.Model):
+
+
+class Event(models.Model):
     Name = models.CharField(max_length=20)
-    Date = models.DateTimeField()
-    Amount=models.DecimalField(max_digits=10, decimal_places=2)
-    EventName= models.CharField(max_length=20)
-    UserID = models.IntegerField()
-    EventID = models.IntegerField()
+    Date = models.DateField()
+    Location = models.CharField(max_length=20)
+    Status = models.CharField(max_length=20)
 
     def __str__(self):
         return self.Name
 
-class Event(models.Model):
+class Donation(models.Model):
     Name = models.CharField(max_length=20)
-    Date = models.DateTimeField()
-    Location = models.CharField(max_length=20)
-    Status = models.CharField(max_length=20)
+    Date = models.DateField()
+    Amount=models.DecimalField(max_digits=10, decimal_places=2)
+    EventName= models.CharField(max_length=20)
+    UserID = models.ForeignKey(User,on_delete=models.CASCADE,)
+    EventID = models.ForeignKey(Event,on_delete=models.CASCADE,)
 
     def __str__(self):
         return self.Name
