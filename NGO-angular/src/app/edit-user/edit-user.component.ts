@@ -23,7 +23,7 @@ export class EditUserComponent implements OnInit {
       console.log(data);
       this.user = data;
     }, error => console.log(error));
-    
+
   }
 
   onSubmit(){

@@ -8,11 +8,12 @@ import { UserListComponent } from './user-list/user-list.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
-
+import { AddEventComponent } from './add-event/add-event.component';
+import { EditEventComponent } from './edit-event/edit-event.component';
 
 const routes: Routes = [
 
-  
+
   { path: "login", component:LoginComponent},
   { path: "signup", component:SignUpComponent},
   { path: "home", component:HomeComponent},
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: "eventList", component:EventListComponent},
   { path: "adduser", component:AddUserComponent},
   { path: 'update/:id', component: EditUserComponent },
+  {path: 'updateevent/:id', component: EditEventComponent },
+  { path: "addevent", component:AddEventComponent},
   { path: "**", component: PageNotFoundComponent},
   { path: "", redirectTo: "/login", pathMatch:"full"}
 

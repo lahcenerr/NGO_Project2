@@ -14,6 +14,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { AddEventComponent } from './add-event/add-event.component';
+import { EditEventComponent } from './edit-event/edit-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     UserListComponent,
     EventListComponent,
     AddUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    AddEventComponent,
+    EditEventComponent
   ],
   imports: [
     BrowserModule,

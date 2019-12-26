@@ -1,0 +1,29 @@
+<h3>Event Management </h3>
+
+<h3> {{errorMsg}}</h3>
+<div style="text-align:right" >
+<button routerLink="/addevent" class = "button" > Add</button></div>
+<router-outlet></router-outlet>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of events">
+            <td>{{event.Name}}</td>
+            <td>{{event.Date}}</td>
+            <td>{{event.Location}}</td>
+            <td>{{event.Status}}</td>
+            <td><button class = "button1" (click) = "updateEvent(event.id)">Edit</button></td>
+            <td><button class = "button2" (click) = "deleteEvent(event.id)"> Delete</button></td>
+
+
+        </tr>
+    </tbody>
+</table>
