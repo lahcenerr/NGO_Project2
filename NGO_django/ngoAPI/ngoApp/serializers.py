@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from . models import User,Donation,Event
+from . models import User,Donation,Event,Register
 # from django.contrib.auth.models import
 
 
@@ -16,4 +16,9 @@ class DonationSerializer(serializers.ModelSerializer):
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
+        fields = '__all__'
+
+class RegisterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Register
         fields = '__all__'

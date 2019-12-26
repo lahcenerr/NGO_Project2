@@ -23,6 +23,7 @@ router = routers.DefaultRouter()
 router.register(r'user',views.UserList)
 router.register(r'donation',views.DonationList)
 router.register(r'event',views.EventList)
+router.register(r'register',views.RegisterList)
 
 
 urlpatterns = [
