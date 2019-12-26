@@ -16,6 +16,10 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
+import { DonationComponent } from './donation/donation.component';
+import { DonationService } from './donation.service';
+import { UserviewComponent } from './userview/userview.component';
+import { EventRegistrationComponent } from './event-registration/event-registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,10 @@ import { EditEventComponent } from './edit-event/edit-event.component';
     AddUserComponent,
     EditUserComponent,
     AddEventComponent,
-    EditEventComponent
+    EditEventComponent,
+    DonationComponent,
+    UserviewComponent,
+    EventRegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ import { EditEventComponent } from './edit-event/edit-event.component';
     ReactiveFormsModule,
     RouterModule
   ],
-  providers: [ UserService],
+  providers: [ UserService, DonationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

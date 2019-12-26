@@ -1,0 +1,30 @@
+<app-home></app-home>
+
+<h3>Donations </h3>
+
+<h3> {{errorMsg}}</h3>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Donation Type</th>
+                
+               
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let don of donations">
+            <td>{{don.Name}}</td>
+            <td>{{don.Date}}</td>
+            <td>{{don.Amount}}</td>
+            <td>{{don.EventName}}</td>
+           
+        </tr>
+    </tbody>
+</table>
+
+
+

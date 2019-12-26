@@ -10,6 +10,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
+import { DonationComponent } from './donation/donation.component';
+
 
 const routes: Routes = [
 
@@ -23,8 +25,11 @@ const routes: Routes = [
   { path: 'update/:id', component: EditUserComponent },
   {path: 'updateevent/:id', component: EditEventComponent },
   { path: "addevent", component:AddEventComponent},
+  { path: 'donation', component: DonationComponent},
   { path: "**", component: PageNotFoundComponent},
-  { path: "", redirectTo: "/login", pathMatch:"full"}
+  { path: "", redirectTo: "/login", pathMatch:"full"},
+  { path: "**", component: PageNotFoundComponent}
+  
 
 ];
 
