@@ -1,0 +1,31 @@
+.button {
+    background-color: lightblue;
+    border-right: 10px;
+    color: black;
+    padding: 8px 30px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    
+  }
+
+.button1 {
+    background-color: goldenrod;
+    cursor: pointer;
+    color: black;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 16px;
+}
+.button2{
+    background-color: crimson;
+    cursor: pointer;
+    color: black;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 16px;
+
+}

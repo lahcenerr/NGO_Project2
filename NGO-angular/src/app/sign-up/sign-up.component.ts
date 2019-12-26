@@ -10,7 +10,14 @@ import { NgForm } from '@angular/forms';
 })
 export class SignUpComponent implements OnInit {
   public submitted = false;
-  public user: User;
+  public user = {
+    id: "",
+    Firstname: "",
+    Lastname: "",
+    Email: "",
+    Password: "",
+    Role: ""
+  };
   public errorMsg;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
@@ -19,15 +26,15 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form: NgForm){
+  onSubmit(){
     this.submitted = true;
     console.log(this.user)
-    this.userService.postUser(form.value).subscribe(
-    
+    this.userService.postUser(this.user).subscribe(
+    (data) => this.user = data,
     () => this.errorMsg = "error",
     () => console.log('the sequence completed!')
   )
-  this.router.navigate(['']);
+  this.router.navigate(['/login']);
 
 
   }

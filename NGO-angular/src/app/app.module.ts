@@ -8,20 +8,31 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './user.service';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { RouterModule, Routes} from "@angular/router";
+import { HomeComponent } from './home/home.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { EventListComponent } from './event-list/event-list.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeComponent,
+    UserListComponent,
+    EventListComponent,
+    AddUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [ UserService],
   bootstrap: [AppComponent]
