@@ -32,3 +32,8 @@ class Donation(models.Model):
 
     def __str__(self):
         return self.Name
+
+class Register(models.Model):
+    UserID = models.ForeignKey(User,on_delete=models.CASCADE,)
+    EventID = models.ForeignKey(Event,on_delete=models.CASCADE,)
+    No_of_People = models.IntegerField()
