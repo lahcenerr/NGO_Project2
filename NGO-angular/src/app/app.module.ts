@@ -20,6 +20,8 @@ import { DonationComponent } from './donation/donation.component';
 import { DonationService } from './donation.service';
 import { UserviewComponent } from './userview/userview.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
+import { MakeDonationComponent } from './make-donation/make-donation.component';
+import { RegistrationComponent } from './registration/registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { EventRegistrationComponent } from './event-registration/event-registrat
     EditEventComponent,
     DonationComponent,
     UserviewComponent,
-    EventRegistrationComponent
+    EventRegistrationComponent,
+    MakeDonationComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

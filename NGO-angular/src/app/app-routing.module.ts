@@ -11,6 +11,10 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
 import { DonationComponent } from './donation/donation.component';
+import { UserviewComponent } from './userview/userview.component';
+import { EventRegistrationComponent } from './event-registration/event-registration.component';
+import { MakeDonationComponent } from './make-donation/make-donation.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const routes: Routes = [
@@ -26,6 +30,10 @@ const routes: Routes = [
   {path: 'updateevent/:id', component: EditEventComponent },
   { path: "addevent", component:AddEventComponent},
   { path: 'donation', component: DonationComponent},
+  { path: 'userview', component: UserviewComponent},
+  { path: 'eventRegistration', component:EventRegistrationComponent,
+      children: [{path:"registration", component:RegistrationComponent}]},
+  { path: 'makeDonation', component:MakeDonationComponent},
   { path: "**", component: PageNotFoundComponent},
   { path: "", redirectTo: "/login", pathMatch:"full"},
   { path: "**", component: PageNotFoundComponent}
