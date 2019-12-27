@@ -23,15 +23,11 @@ class Event(models.Model):
         return self.Name
 
 class Donation(models.Model):
-    Name = models.CharField(max_length=20)
-    Date = models.DateField()
-    Amount=models.DecimalField(max_digits=10, decimal_places=2)
-    EventName= models.CharField(max_length=20)
     UserID = models.ForeignKey(User,on_delete=models.CASCADE,)
     EventID = models.ForeignKey(Event,on_delete=models.CASCADE,)
+    Date = models.DateField()
+    Amount=models.DecimalField(max_digits=10, decimal_places=2)
 
-    def __str__(self):
-        return self.Name
 
 class Register(models.Model):
     UserID = models.ForeignKey(User,on_delete=models.CASCADE,)

@@ -8,18 +8,25 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DonationService {
-  url = "http://127.0.0.1:8000/donation/";
+  private _url: string = "http://127.0.0.1:8000/donation/";
 
   constructor(private http: HttpClient) { }
 
 
-public getDonations(): Observable<Donation>{
-  return this.http.get<Donation>(this.url)
-  .pipe(catchError(this.errorHandler));
-}
+    public getDonations(): Observable<Donation>{
+      return this.http.get<Donation>(this._url)
+      .pipe(catchError(this.errorHandler));
+    }
 
-errorHandler(error: HttpErrorResponse){
-  return throwError(error.message || "Server Error");
-}
+    public postDonation(donation: Donation):Observable<Donation>{
+      console.log(this);
+      return this.http.post<any>(this._url, donation)
+      .pipe(catchError(this.errorHandler));
+
+    }
+
+    errorHandler(error: HttpErrorResponse){
+      return throwError(error.message || "Server Error");
+    }
 
 }
