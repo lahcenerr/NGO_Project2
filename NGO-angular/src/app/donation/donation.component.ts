@@ -8,17 +8,20 @@ import { Donation } from '../donation.model';
   styleUrls: ['./donation.component.css']
 })
 export class DonationComponent implements OnInit {
-  donations = new Donation();
+  donations: Donation;
   errorMsg: string;
 
   constructor(private donationService: DonationService) { }
 
   ngOnInit() {
+    console.log(this.donations);
     this.donationService.getDonations().subscribe(
       (data) => this.donations = data,
       () => this.errorMsg="No Data Found!",
-      () => console.log("success")
-    )
+      () => console.log(this.donations)
+    );
+    console.log(this.donations);
+
   }
 
 }

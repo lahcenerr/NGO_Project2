@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="939a71ef-c7b8-4e2a-90a4-4c8f1db4740c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../NGO-angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../NGO-angular/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NGO-angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../NGO-angular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NGO-angular/src/app/event-registration/event-registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NGO-angular/src/app/event-registration/event-registration.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NGO-angular/src/app/eventregistration.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../NGO-angular/src/app/eventregistration.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NGO-angular/src/app/registration/registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../NGO-angular/src/app/registration/registration.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NGO-angular/src/app/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../NGO-angular/src/app/registration/registration.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />

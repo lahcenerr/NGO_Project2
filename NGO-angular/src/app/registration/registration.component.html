@@ -2,24 +2,24 @@
 <h2>Event Registration: </h2>
 <div class="signup">
 
-    <form #eventForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+    <form #eventRegistrationForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
 
       <div class="form-group">
         <label>Event Name</label>
-        <input type="text" #Name="ngModel" required class="form-control"  name="EventID" [(ngModel)]="event.EventID">
-        <small class="text-danger" >Event Name is required</small>
+        <input type="text" #EventID="ngModel" required class="form-control" [class.is-invalid] = "EventID.invalid && EventID.touched" name="EventID" [(ngModel)]="event.EventID">
+        <small class="text-danger" [class.d-none]="EventID.valid || EventID.untouched">Event Name is required</small>
       </div>
       <div class="form-group">
         <label>User Name</label>
-        <input type="text" #Name="ngModel" required class="form-control"  name="UserID" [(ngModel)]="event.UserID">
-        <small class="text-danger" >User Name is required</small>
+        <input type="text" #UserID="ngModel" required class="form-control"  [class.is-invalid] = "UserID.invalid && UserID.touched" name="UserID" [(ngModel)]="event.UserID">
+        <small class="text-danger" [class.d-none]="UserID.valid || UserID.untouched">User Name is required</small>
       </div>
       <div class="form-group">
         <label>Number of people</label>
-        <input type="text" #Name="ngModel" required class="form-control"  name="No_of_People" [(ngModel)]="event.No_of_People">
-        <small class="text-danger" > Number of People is required</small>
+        <input type="text" #No_of_People="ngModel"  class="form-control"  name="No_of_People" [(ngModel)]="event.No_of_People">
+       
       </div>
-      <button class="btn btn-primary"  type="submit">Submit form</button>
+      <button class="btn btn-primary" [disabled]="eventRegistrationForm.form.invalid" type="submit">Submit form</button>
   
     </form>
     <div class="alert alert-danger" *ngIf="errorMsg">

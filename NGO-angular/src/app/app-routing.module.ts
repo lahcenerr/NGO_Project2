@@ -31,10 +31,9 @@ const routes: Routes = [
   { path: "addevent", component:AddEventComponent},
   { path: 'donation', component: DonationComponent},
   { path: 'userview', component: UserviewComponent},
-  { path: 'eventRegistration', component:EventRegistrationComponent,
-      children: [{path:"registration", component:RegistrationComponent}]},
+  { path: 'eventRegistration', component:EventRegistrationComponent},
+  { path:"registration", component:RegistrationComponent},
   { path: 'makeDonation', component:MakeDonationComponent},
-  { path: "**", component: PageNotFoundComponent},
   { path: "", redirectTo: "/login", pathMatch:"full"},
   { path: "**", component: PageNotFoundComponent}
   

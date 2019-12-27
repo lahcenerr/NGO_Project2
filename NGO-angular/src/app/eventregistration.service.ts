@@ -12,7 +12,7 @@ export class EventregistrationService {
 
   constructor( private http: HttpClient) { }
 
-  public registerEvent(eventregistration: Eventregistration): Observable<Eventregistration>{
+  public registerEvent(eventregistration): Observable<Eventregistration>{
     return this.http.post<any>(this._url, eventregistration)
     .pipe(catchError(this.errorHandler));
 

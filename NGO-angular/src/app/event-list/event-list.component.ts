@@ -25,8 +25,8 @@ export class EventListComponent implements OnInit {
     this.eventService.getEvents().subscribe(
       (data) => this.events = data,
       () => this.errorMsg="No Data Found!",
-      () => console.log("success")
-    )
+      () => console.log(this.events)
+    );
 
   }
 

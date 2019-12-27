@@ -9,13 +9,18 @@ import { EventregistrationService } from '../eventregistration.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  event = new Eventregistration();
-  id: number;
+  public event = {
+    EventID: null,
+    UserID: null,
+    No_of_People: null
+  };
+  public id: number;
+  submitted = false;
   constructor(private eventRegistration: EventregistrationService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    // this.event = new Eventregistration;
-    // this.id = this.route.snapshot.params['id'];
+    //  this.event = new Eventregistration;
+    //  this.id = this.route.snapshot.params['id'];
 
     // this.eventRegistration.getEventName(this.id)
     // .subscribe(data => {
@@ -26,11 +31,14 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("Test")
+    this.submitted = true;
+    console.log(event);
     this.eventRegistration.registerEvent(this.event)
-    .subscribe(data => console.log(data),
+    .subscribe(response => console.log("Success", response),
     error => console.log(error));
     this.router.navigate(['/eventRegistration']);
   }
+ 
+
 
 }

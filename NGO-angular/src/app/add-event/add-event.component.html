@@ -5,8 +5,8 @@
 
       <div class="form-group">
         <label>Event Name</label>
-        <input type="text" #Name="ngModel" required class="form-control"  name="Name" [(ngModel)]="event.Name">
-        <small class="text-danger" >Event Name is required</small>
+        <input type="text" #Name="ngModel" required class="form-control" [class.is-invalid]="Name.invalid && Name.touched" name="Name" [(ngModel)]="event.Name">
+        <small class="text-danger" [class.d-none]="Name.valid || Name.untouched" >Event Name is required</small>
       </div>
 
       <div class="form-group">
@@ -17,14 +17,14 @@
 
       <div class="form-group">
         <label>Location</label>
-        <input type="text" #Location="ngModel" required class="form-control"  name="Location" [(ngModel)]="event.Location">
-        <small class="text-danger" >Location is required</small>
+        <input type="text" #Location="ngModel" required class="form-control" [class.is-invalid]="Location.invalid && Location.touched" name="Location" [(ngModel)]="event.Location">
+        <small class="text-danger" [class.d-none]="Location.valid || Location.untouched">Location is required</small>
       </div>
 
       <div class="form-group">
         <label>Status</label>
-        <input type="text" class="form-control" #Status='ngModel' required class="form-control"  name="status" [(ngModel)]="event.Status" >
-        <small class="text-danger">Status is required</small>
+        <input type="text" class="form-control" [class.is-invalid]="Status.invalid && Status.touched" #Status='ngModel' required class="form-control"  name="status" [(ngModel)]="event.Status" >
+        <small class="text-danger" [class.d-none]="Status.valid || Status.untouched">Status is required</small>
       </div>
 
 

@@ -22,6 +22,7 @@ import { UserviewComponent } from './userview/userview.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
 import { MakeDonationComponent } from './make-donation/make-donation.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { EventregistrationService } from './eventregistration.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ReactiveFormsModule,
     RouterModule
   ],
-  providers: [ UserService, DonationService],
+  providers: [ UserService, DonationService, EventregistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

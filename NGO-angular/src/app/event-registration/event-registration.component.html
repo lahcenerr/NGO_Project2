@@ -1,6 +1,7 @@
 <app-userview></app-userview>
 <ul style="list-style-type:none;">
     <li *ngFor="let event of events">
-   <button (click)="register()">{{event.Name}}</button>
+   <button routerLink="/registration">{{event.Name}}</button>
     </li>
 </ul>
+<router-outlet></router-outlet>

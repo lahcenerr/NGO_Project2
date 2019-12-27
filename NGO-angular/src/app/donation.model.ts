@@ -3,6 +3,6 @@ export class Donation {
     Date: string;
     Amount: number;
     EventName: string;
-    UserID: string;
-    EventID: string;
+    UserID: number;
+    EventID: number;
 }
