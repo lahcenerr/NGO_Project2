@@ -1,0 +1,49 @@
+<!-- <p>register works!</p> -->
+<!-- <div style = 'text-align: center;'>
+<h1>Create an account</h1>
+<input [(ngModel)] = 'register.firstname' placeholder="firstname"><br>
+<input [(ngModel)] = 'register.lastname' placeholder="lastname"><br>
+<input [(ngModel)] = 'register.email' placeholder="email"><br>
+<input [(ngModel)] = 'register.password' placeholder="password"><br>
+<input [(ngModel)] = 'register.role' placeholder="role"><br>
+<button (click)='RegisterUser()'>Register User</button>
+
+</div> -->
+<!-- <table>
+    <tr *ngFor = 'let user of users'>
+        <td>{{user.Firstname}}</td>
+    </tr>
+</table> -->
+<!-- <form  style="border:1px solid #ccc"> -->
+    <div class="container">
+      <h1>Sign Up</h1>
+      <hr>
+
+      <b>Firstname</b><input type="text" placeholder="Enter firstname" [(ngModel)] ='firstname' required>
+      <p>{{firstname}}</p>
+      <b>Lastname</b><input type="text" placeholder="Enter lastname"  [(ngModel)] ='lastname'required>
+      <p>{{lastname}}</p>
+      <b>Email</b><input type="text" placeholder="Enter email"  [(ngModel)] ='email' required>
+      <p>{{email}}</p>
+      <b>Password</b><input type="password" placeholder="Enter password" [(ngModel)] ='password' required>
+        <p>{{password}}</p>
+      <label for="email"><b>Role</b></label>
+      <select [(ngModel)] ='role'>
+        <option>admin</option>
+        <option>user</option>
+      </select>
+      <p>{{role}}</p>
+      
+      <div>
+          <br><br>
+      </div>
+
+      <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required> -->
+    
+      <div class="clearfix">
+        <button type="button" class="cancelbtn" (click) = 'GoToLogin()'>Cancel</button>
+        <button type="submit" class="signupbtn"(click) = 'addUser()'>Sign Up</button>
+      </div>
+    </div>
+  <!-- </form> -->
