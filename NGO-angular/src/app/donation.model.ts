@@ -1,8 +1,9 @@
 export class Donation {
-    Name: string;
+    
+    EventName: string;
+    id: string;
+    UserID: string;
+    EventID: string;
     Date: string;
     Amount: number;
-    EventName: string;
-    UserID: number;
-    EventID: number;
 }
