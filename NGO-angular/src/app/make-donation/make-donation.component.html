@@ -1,33 +1,31 @@
 <div class="signup">
-    <h2>New Event</h2>
+    <h2>New Donation</h2>
 
-    <form #eventForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+    <form #donationForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
 
       <div class="form-group">
         <label>User Name</label>
-        <input type="text" #Name="ngModel" required class="form-control"  name="UserID" [(ngModel)]="donation.UserID">
-        <small class="text-danger">User Name is required</small>
+        <input type="text" #UserID="ngModel" required class="form-control" [class.is-invalid]="UserID.invalid && UserID.touched" name="UserID" [(ngModel)]="donation.UserID">
+        <small class="text-danger" [class.d-none]="UserID.valid || UserID.untouched">User Name is required</small>
       </div>
 
       <div class="form-group">
         <label>Event Name</label>
-        <input type="text" #Name="ngModel" required class="form-control"  name="EventID" [(ngModel)]="donation.EventID">
-        <small class="text-danger" >Event Name is required</small>
+        <input type="text" #EventID="ngModel" required class="form-control" [class.is-invalid]="EventID.invalid && EventID.touched" name="EventID" [(ngModel)]="donation.EventID">
+        <small class="text-danger" [class.d-none]="EventID.valid || EventID.untouched" >Event Name is required</small>
       </div>
 
       <div class="form-group">
         <label>Date</label>
-        <input type="date" #Date='ngModel' required class="form-control"  name="date" [(ngModel)]="donation.Date" [pattern]="datePattern" >
-        <small class="text-danger">Date is required!</small>
+        <input type="date" #Date='ngModel'  class="form-control"  name="date" [(ngModel)]="donation.Date" [pattern]="datePattern" >
       </div>
 
       <div class="form-group">
         <label>Amount</label>
-        <input type="number" #Name="ngModel" required class="form-control"  name="Amount" [(ngModel)]="donation.Amount">
-        <small class="text-danger">Amount is required</small>
+        <input type="number" #Amount="ngModel"  class="form-control"  name="Amount" [(ngModel)]="donation.Amount">
       </div>
 
-      <button class="btn btn-primary"  type="submit">Submit form</button>
+      <button class="btn btn-primary"  [disabled]="donationForm.form.invalid" type="submit">Submit form</button>
       <div class="alert alert-danger" *ngIf="errorMsg">
         {{errorMsg}}
       </div>
