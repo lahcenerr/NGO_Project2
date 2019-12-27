@@ -25,6 +25,7 @@ export class UserService {
   }
   addUser(user):Observable<any>{
     const body = {Firstname:user.firstname,Lastname:user.lastname,Email:user.email,Password:user.password,Role:user.role};
+    console.log(body)
     return this.http.post(this._url,body)
   }
   logout(){
